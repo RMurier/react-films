@@ -1,0 +1,68 @@
+.container {
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: fit-content;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .movieTitle {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .rating {
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #d43c3c;
+  }
+  
+  .emptyMessage {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 50px;
+    color: #555;
+  }
