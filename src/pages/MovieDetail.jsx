@@ -45,7 +45,6 @@ const MovieDetail = () => {
           `${import.meta.env.VITE_BASE_URL}/${id}/similar?api_key=${import.meta.env.VITE_API_KEY}&language=fr-FR`
         );
         const data = await response.json();
-        console.log(data);
         setSimilars(data.results.slice(0, 5));
       } catch (error) {
         console.log("Erreur lors de la récupération des films similaires :", error);
