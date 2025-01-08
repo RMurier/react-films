@@ -42,7 +42,7 @@ const MovieList = () => {
             <h3>{movie.title}</h3>
             <p>Note : {movie.vote_average.toFixed(2)}/10</p>
             <button onClick={() => navigate(`/movie/${movie.id}`)}>
-              Voir les détails
+              Voir le détail
             </button>
           </div>
         ))}

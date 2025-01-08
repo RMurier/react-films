@@ -1,9 +1,12 @@
 import React from "react";
 import { useWishlist } from "../Providers/WishlistProvider";
 import styles from "./Wishlist.module.css";
+import { useNavigate } from "react-router";
+
 
 const Wishlist = () => {
   const { wishlist, removeFromWishlist } = useWishlist();
+  const navigate = useNavigate();
 
   if (wishlist.length === 0) {
     return <p className={styles.emptyMessage}>Votre wishlist est vide.</p>;
@@ -22,6 +25,9 @@ const Wishlist = () => {
             />
             <h3 className={styles.movieTitle}>{movie.title}</h3>
             <p className={styles.rating}>Note : {movie.vote_average}/10</p>
+            <button onClick={() => navigate(`/movie/${movie.id}`)}>
+              Voir le détail
+            </button>
             <button
               onClick={() => removeFromWishlist(movie.id)}
               className={styles.button}
